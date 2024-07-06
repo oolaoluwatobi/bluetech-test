@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# Blutech Solutions LLC Test (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This readme provides a instructions on how to get this react project working.
 
 Currently, two official plugins are available:
 
