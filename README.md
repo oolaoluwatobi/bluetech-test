@@ -2,12 +2,12 @@
 
 This readme provides  instructions on how to get this react project working.
 
-After cloning this repository, in your terminal, enter to install all dependencies.
+After cloning this repository, in your terminal, install all dependencies. To install the dependencies enter:
 ```js
 npm install
 ```
 
-After the installation, enter to start the react app, the app should run on `http://localhost:5173`
+After the installation, start the react app, To start the react app, `run dev` the app should run on `http://localhost:5173`
 ```js
 npm run dev
 ````
