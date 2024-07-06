@@ -7,7 +7,7 @@ After cloning this repository, in your terminal, install all dependencies. To in
 npm install
 ```
 
-After the installation, start the react app, To start the react app, `run dev` the app should run on `http://localhost:5173`
+After the installation, start the react app, To start the react app enter `npm run dev` the app should run on `http://localhost:5173`
 ```js
 npm run dev
 ````
