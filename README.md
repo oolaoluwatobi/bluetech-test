@@ -22,4 +22,4 @@ The APIs integrated are;
 - a GET request, 
 - and a GET request with a query string to search the database on the backend.
 
-API Context is used, the data is fetched in a context provider and shared across the app.
+API Context was used, the data was fetched in a context provider and shared across the app.
