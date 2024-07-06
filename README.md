@@ -1,6 +1,11 @@
 # Blutech Solutions LLC Test (React + TypeScript + Vite)
 
-This readme provides a instructions on how to get this react project working.
+This readme provides  instructions on how to get this react project working.
+
+After cloning this repository, in your terminal, enter
+```js
+npm i
+```
 
 Currently, two official plugins are available:
 
