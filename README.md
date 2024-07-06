@@ -35,8 +35,6 @@ import axios from "axios";
 // import { useQuery } from 'react-query';
 import { IGetProductParams, Product, TSupplier } from "../lib/types";
 
-const BASE_URL = "http://3.88.1.181:8000/products/public/catalog";
-
 interface IFetchDataProps {
   supplier: TSupplier;
   search?: string;
@@ -120,22 +118,6 @@ export const useProductContext = () => useContext(ProductContext);
 
 ```
 
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
