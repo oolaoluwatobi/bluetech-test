@@ -1,10 +1,13 @@
+import { ProductsProvider } from "./contexts/ProductsContext";
 import DepartmentList from "./DepartmentList";
 
 function App() {
   return (
-    <main>
-      <DepartmentList />
-    </main>
+    <ProductsProvider>
+      <main>
+        <DepartmentList />
+      </main>
+    </ProductsProvider>
   );
 }
 

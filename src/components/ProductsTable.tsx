@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { Product } from "../lib/types";
+import { useProductContext } from "../contexts/ProductsContext";
 
-interface ProductsTableProps {
-  productsData?: Product[];
-}
-
-const ProductsTable = ({ productsData }: ProductsTableProps) => {
+const ProductsTable = () => {
   const [selected, setSelected] = useState<number[]>([]);
+  const { products: productsData } = useProductContext();
   // console.log(productsData, "products___table");
+
   return (
-    <div className="overflow-x-auto w-full ">
+    <div className="overflow-x-auto w-full euclid_font ">
       <table className="table w-[1440px] px-4 lg:px-8  mx-auto bg-whit bg-green-30 rounded-[16px] space-y4 ">
         {/* head */}
         <thead className="bg-[#F0F4FE] bg-red-30 mb10 rounded-lg">
@@ -51,8 +49,8 @@ const ProductsTable = ({ productsData }: ProductsTableProps) => {
         </thead>
 
         <tbody className="h-2.5 bg-[#8C8C8C17]"></tbody>
-        <tbody>
-          {/* row 1 */}
+        <tbody className="w-full">
+          {/* rows */}
           {productsData?.map((product, index) => (
             <tr
               key={index}
@@ -72,6 +70,14 @@ const ProductsTable = ({ productsData }: ProductsTableProps) => {
                     type="checkbox"
                     checked={selected.includes(index)}
                     onChange={() => {
+                      setSelected((prev) => {
+                        if (prev.includes(index)) {
+                          return prev.filter((item) => item !== index);
+                        }
+                        return [...prev, index];
+                      });
+                    }}
+                    onClick={() => {
                       setSelected((prev) => {
                         if (prev.includes(index)) {
                           return prev.filter((item) => item !== index);
@@ -118,7 +124,6 @@ const ProductsTable = ({ productsData }: ProductsTableProps) => {
             </tr>
           )}
         </tbody>
-        {/* foot */}
       </table>
     </div>
   );
