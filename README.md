@@ -4,8 +4,15 @@ This readme provides  instructions on how to get this react project working.
 
 After cloning this repository, in your terminal, enter
 ```js
-npm i
+npm install
 ```
+to install all dependencies.
+
+After the installation, enter
+```js
+npm run dev
+````
+to start the react app, the app should run on `http://localhost:5173`
 
 Currently, two official plugins are available:
 
